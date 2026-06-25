@@ -33,7 +33,8 @@ FetchContent_MakeAvailable(raygui)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc -static")
 
 add_executable(${PROJECT_NAME} main.cpp
-        Ball.h)
+        Ball.h
+        Button.h)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
 target_include_directories(${PROJECT_NAME} PRIVATE ${raygui_SOURCE_DIR}/src)
