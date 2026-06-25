@@ -1,8 +1,9 @@
 #pragma once
-#include <iostream>
-#include <ostream>
-#include <string>
+
+
+#define RAYGUI_IMPLEMENTATION
 #include "raylib.h"
+
 
 class Button {
 public:

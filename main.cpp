@@ -23,10 +23,10 @@ int main() {
 
 
     // Main game loop
-
+    Color yellow = {243, 216, 63, 255};
     while (!WindowShouldClose()) {
         bool mousePressed = IsMouseButtonPressed(MOUSE_BUTTON_LEFT);
-        
+
         BeginDrawing();
         ClearBackground(bgColor);
         Vector2 mousePos = GetMousePosition();
@@ -35,6 +35,11 @@ int main() {
         if (startButton.isPressed(mousePos, mousePressed)) {
             cout << mousePos.x << " " << mousePos.y << endl;
         };
+        DrawRectangleRoundedLinesEx({10, 10, 780, 780}, 0.18f, 20, 2, yellow);
+        //DrawRectangleRoundedLinesEx Added in raylib 5.5
+        //DrawRectangleRoundedLines({10, 10, 780, 780}, 0.18f, 20, 2, yellow); //Use this for previous raylib versions
+        DrawLineEx({25, 730}, {775, 730}, 3, yellow);
+
         DrawFPS(10, 10);
         EndDrawing();
     }
