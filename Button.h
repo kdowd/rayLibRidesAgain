@@ -28,7 +28,7 @@ public:
             position.x, position.y, static_cast<float>(texture.width), static_cast<float>(texture.height)
         };
 
-        if (mousePressed) {
+        if (CheckCollisionPointRec(mousePos, rect) && mousePressed) {
             return true;
         }
 
